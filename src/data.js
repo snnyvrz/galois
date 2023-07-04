@@ -25,39 +25,6 @@ export const headerData = {
       ],
     },
     {
-      text: 'Pages',
-      links: [
-        {
-          text: 'Pricing',
-          href: '#',
-        },
-        {
-          text: 'News Room',
-          href: '#',
-        },
-        {
-          text: 'Security',
-          href: '#',
-        },
-        {
-          text: 'Blog',
-          href: getPermalink('/blog'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
-    },
-    {
-      text: 'Road Map',
-      href: '#',
-    },
-    {
       text: 'Team',
       href: '#',
     },

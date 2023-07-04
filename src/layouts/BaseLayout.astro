@@ -6,7 +6,7 @@ import BasicScripts from '~/components/common/BasicScripts.astro';
 
 import { MetaSEO } from '~/types';
 import { SITE } from '~/config.mjs';
-import Background from '~/components/common/Background.astro';
+import Background from '~/components/common/Background';
 
 export interface Props {
   meta?: MetaSEO;
@@ -25,12 +25,11 @@ const { language = 'en', textDirection = 'ltr' } = SITE;
   <body class="antialiased text-page bg-light dark:text-slate-300 tracking-tight dark:bg-dark">
     <slot />
     <BasicScripts />
-    <Background />
+    <Background client:only="react" />
     <style is:global>
       img {
         content-visibility: auto;
       }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-links@2/tsparticles.preset.links.min.js"></script>
   </body>
 </html>
