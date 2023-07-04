@@ -1,0 +1,29 @@
+---
+import Particles from 'astro-particles';
+import type { ISourceOptions } from 'tsparticles-engine';
+
+const options: ISourceOptions = {
+  background: {
+    color: '#000',
+    opacity: 0.2,
+  },
+  fullScreen: {
+    zIndex: -1,
+  },
+  preset: 'links',
+};
+---
+
+<script>
+  import { type Engine } from 'tsparticles-engine';
+  import { loadLinksPreset } from 'tsparticles-preset-links';
+
+  // the function name is the parameter passed to the init attribute
+  // required
+  // add the function to window is mandatory, it will be searched there
+  window.particlesInit = async function (engine: Engine) {
+    await loadLinksPreset(engine);
+  };
+</script>
+
+<Particles id="tsparticles" options={options} init="particlesInit" />

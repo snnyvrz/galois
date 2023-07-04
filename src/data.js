@@ -1,42 +1,47 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
-      text: 'Landing',
+      text: 'Solutions',
       links: [
         {
-          text: 'Sass',
-          href: getPermalink('/landing/saas'),
+          text: 'Hybrid Exchange',
+          href: getPermalink('/landing/hybrid-exchange'),
         },
         {
-          text: 'Startup',
-          href: getPermalink('/landing/startup'),
+          text: 'Shared Fiat Currency Exchange',
+          href: getPermalink('/landing/shared-fiat-currency-exchange'),
         },
         {
-          text: 'Mobile App',
-          href: getPermalink('/landing/mobile-app'),
+          text: 'Multi Strategy Wallet',
+          href: getPermalink('/landing/multi-strategy-wallet'),
         },
+        {
+          text: 'Liquidity Aggregator',
+          href: getPermalink('/landing/liquidity-aggregator'),
+        },
+        { text: 'Market Making As A Service', href: getPermalink('/landing/market-making-as-a-service') },
       ],
     },
     {
       text: 'Pages',
       links: [
         {
-          text: 'Features',
-          href: getPermalink('/#features'),
-        },
-        {
           text: 'Pricing',
           href: '#',
         },
         {
-          text: 'About us',
+          text: 'News Room',
           href: '#',
         },
         {
-          text: 'Contact',
+          text: 'Security',
           href: '#',
+        },
+        {
+          text: 'Blog',
+          href: getPermalink('/blog'),
         },
         {
           text: 'Terms',
@@ -49,15 +54,16 @@ export const headerData = {
       ],
     },
     {
-      text: 'Widgets',
+      text: 'Road Map',
       href: '#',
     },
     {
-      text: 'Blog',
-      href: getBlogPermalink(),
+      text: 'Team',
+      href: '#',
     },
+    { text: 'Contact', href: '#' },
   ],
-  actions: [{ type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }],
+  actions: [],
 };
 
 export const footerData = {
@@ -115,7 +121,6 @@ export const footerData = {
     { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `

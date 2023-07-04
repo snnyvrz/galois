@@ -43,5 +43,10 @@
   },
   "engines": {
     "node": ">=16.12.0"
+  },
+  "dependencies": {
+    "astro-particles": "^2.10.0",
+    "tsparticles": "^2.10.1",
+    "tsparticles-preset-links": "^2.10.1"
   }
 }
