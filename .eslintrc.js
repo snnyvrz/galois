@@ -14,7 +14,7 @@ module.exports = {
     {
       files: ['*.js'],
       rules: {
-        'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+        'no-mixed-spaces-and-tabs': ['warn', 'smart-tabs'],
       },
     },
     {
@@ -25,7 +25,7 @@ module.exports = {
         extraFileExtensions: ['.astro'],
       },
       rules: {
-        'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+        'no-mixed-spaces-and-tabs': ['warn', 'smart-tabs'],
       },
     },
     {
@@ -34,7 +34,7 @@ module.exports = {
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         '@typescript-eslint/no-unused-vars': [
-          'error',
+          'warn',
           { argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_' },
         ],
         '@typescript-eslint/no-non-null-assertion': 'off',

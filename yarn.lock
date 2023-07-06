@@ -1316,12 +1316,24 @@ astro-icon@^0.8.1:
     resolve-pkg "^2.0.0"
     svgo "^2.8.0"
 
+astro-page-transition@^0.5.6:
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/astro-page-transition/-/astro-page-transition-0.5.6.tgz#c86ff8940cb80372adb9aba99e1aae37fc9ae6d0"
+  integrity sha512-l25+H38D5VNOTnFLtZbCbNXJzHj6bMFHgAhV+xjhts8fixgQFxGvvPcphyHxQ4cwEcA0iVgLyQ8sh5Quvke5AQ==
+
 astro-particles@^2.10.0:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/astro-particles/-/astro-particles-2.10.0.tgz#b9bb6e3b02f03c182efc4c3c2b389723a62c44d5"
   integrity sha512-DE1azMdcu2dkXxEKd7seoRqbhlh4UnTfinWM+RF5jm00tPtaJ+cjrz5nKHRnzYcyTAR18MaRAC4lIKf3tu86iQ==
   dependencies:
     tsparticles-engine "^2.10.1"
+
+astro-scroll-observer@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/astro-scroll-observer/-/astro-scroll-observer-0.5.3.tgz#6f6ddec9bd118b51114e925707f55ffdb8e8bb91"
+  integrity sha512-J7p9c501d7bNi1H9poiiSUPcodiRmBKa/bTTDCkTQkMvCF0iLkKDlkGcIoCTvSYUTC5wtfTJwc2bdv+tHKUDkg==
+  dependencies:
+    lodash-es "^4.17.21"
 
 astro@^2.6.4:
   version "2.7.2"
@@ -1637,7 +1649,7 @@ character-reference-invalid@^2.0.0:
   resolved "https://registry.yarnpkg.com/character-reference-invalid/-/character-reference-invalid-2.0.1.tgz#85c66b041e43b47210faf401278abf808ac45cb9"
   integrity sha512-iBZ4F4wRbyORVsu0jPV7gXkOsGYjGHPmAyv+HiHG8gi5PtC9KI2j1+v8/tlibRvjoWX027ypmG/n0HtO5t7unw==
 
-chokidar@^3.5.3:
+"chokidar@>=3.0.0 <4.0.0", chokidar@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
   integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
@@ -3102,6 +3114,11 @@ image-size@^1.0.2:
   dependencies:
     queue "6.0.2"
 
+immutable@^4.0.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.3.0.tgz#eb1738f14ffb39fd068b1dbe1296117484dd34be"
+  integrity sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==
+
 import-fresh@^3.0.0, import-fresh@^3.2.1:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
@@ -3534,6 +3551,11 @@ locate-path@^6.0.0:
   integrity sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==
   dependencies:
     p-locate "^5.0.0"
+
+lodash-es@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash.castarray@^4.4.0:
   version "4.4.0"
@@ -5216,6 +5238,15 @@ sass-formatter@^0.7.5, sass-formatter@^0.7.6:
   dependencies:
     suf-log "^2.5.3"
 
+sass@^1.63.6:
+  version "1.63.6"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.63.6.tgz#481610e612902e0c31c46b46cf2dad66943283ea"
+  integrity sha512-MJuxGMHzaOW7ipp+1KdELtqKbfAWbH7OLIdoSMnVe3EXPMTmxTmlaZDCTsgIpPCs3w99lLo9/zDKkOrJuT5byw==
+  dependencies:
+    chokidar ">=3.0.0 <4.0.0"
+    immutable "^4.0.0"
+    source-map-js ">=0.6.2 <2.0.0"
+
 sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
@@ -5349,7 +5380,7 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-source-map-js@^1.0.1, source-map-js@^1.0.2:
+"source-map-js@>=0.6.2 <2.0.0", source-map-js@^1.0.1, source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==

@@ -3,12 +3,10 @@ import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import LatestPosts from '~/components/blog/LatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -24,7 +22,7 @@ const meta = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
+    callToAction={{ text: 'Get The App', href: '#', icon: 'tabler:download' }}
     callToAction2={{ text: 'Learn more', href: '#features' }}
   >
     <Fragment slot="title">
@@ -33,54 +31,48 @@ const meta = {
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-
-  <Note />
-
   <!-- Features Widget *************** -->
 
   <Features
-    highlight="Features"
-    title="What you get with AstroWind"
-    subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
+    highlight="Solutions"
+    title="What you get with Galois Foundation"
     items={[
       [
         {
-          title: 'Astro + Tailwind CSS Integration',
+          title: 'Hybrid Exchange',
           description:
-            'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+            'Galois hybrid noncustodial cryptocurrency exchange system is a cutting-edge solution for seamless and secure coin trading. Built on a foundation of innovation and user convenience, our platform offers a unique combination of a noncustodial order book and swap functionality. Users can exchange coins using various order types such as limit, market, stop limit, and OCO. At the core of our system lies a powerful liquidity aggregator, meticulously searching for the most efficient routes to minimize fees and optimize exchange rates. To further enhance liquidity and ensure continuous operation, our platform incorporates a market maker that bridges the order book and swap system, as well as the global market.',
           icon: 'tabler:brand-tailwind',
         },
         {
-          title: 'Ready-to-use Components',
+          title: 'Shared Fiat Currency Exchange',
           description:
-            'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+            'Our shared currency exchange system is designed to harness the power of decentralized finance (DeFi) paradigms within the realm of traditional finance. Through shared liquidity and a rewarding system, we have created an innovative solution to enhance liquidity and streamline currency exchanges. By establishing a pool of liquidity, we incentivize member exchanges to contribute liquidity to the shared pool through rewards and commissions.',
           icon: 'tabler:components',
         },
         {
-          title: 'Best Practices',
+          title: 'Multi Strategy Wallet',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+            'Our smart contract-based wallet serves as an infrastructure solution for companies and groups that operate with shared financial decision-making. With the ability to define transaction policies, users can establish groups of sign holders, withdrawal conditions, and transaction limits as strategies for their company wallet. Each strategy undergoes a voting process, where members of the company or group have the opportunity to accept or reject proposed strategies. Once a strategy is accepted by the majority, it becomes attached to the wallet, ensuring that all transactions align with the approved policies. This transparent and collaborative approach ensures that financial decisions are made collectively, promoting accountability and facilitating efficient asset management.',
           icon: 'tabler:list-check',
         },
       ],
       [
         {
-          title: 'Excellent Page Speed',
+          title: 'Liquidity Aggregator',
           description:
-            'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+            'Our liquidity aggregator revolutionizes cryptocurrency swaps by offering users the optimal swap routes based on their desired fees. With an added focus on rate optimization, we ensure that users receive the most competitive rates for their swaps. Our algorithm is meticulously designed to minimize request processing time, providing fast and efficient swaps. Moreover, our service is highly scalable, allowing for multiple instances of the aggregator to work in harmony through a dedicated request dispatcher. Integrated as a service, our liquidity aggregator can seamlessly integrate with decentralized exchanges (DEXs) across various blockchain networks, enhancing liquidity options for users.',
           icon: 'tabler:rocket',
         },
         {
-          title: 'Search Engine Optimization (SEO)',
+          title: 'Market Making As A Service',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+            'Token projects often encounter significant challenges that impede their success in the market. Lack of liquidity and low trading volume are among the most pressing issues faced by these projects. Insufficient liquidity not only discourages traders and investors from actively participating in trading activities but also creates an environment prone to price manipulation. The limited availability of liquidity makes it easier for bad actors to manipulate token prices, leading to market instability and mistrust. Furthermore, token projects often face difficulties in listing their tokens on major crypto exchanges due to the lack of liquidity, resulting in lower transaction numbers and decreased visibility for their assets.',
           icon: 'tabler:arrows-right-left',
         },
         {
-          title: 'Open to new ideas and contributions',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+          title: '...And more!',
+          description: 'For Example?',
           icon: 'tabler:bulb',
         },
       ],
@@ -247,22 +239,6 @@ const meta = {
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
         icon: 'icon-park:page-template',
       },
-    ]}
-  />
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <LatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-    postIds={[
-      'get-started-website-with-astro-tailwind-css.md',
-      'how-to-customize-astrowind-to-your-brand.md',
-      'useful-resources-to-create-websites.md',
-      'astrowind-template-in-depth.md',
     ]}
   />
 
