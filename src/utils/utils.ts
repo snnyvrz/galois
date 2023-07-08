@@ -19,3 +19,7 @@ export const trim = (str = '', ch?: string) => {
   while (end > start && str[end - 1] === ch) --end;
   return start > 0 || end < str.length ? str.substring(start, end) : str;
 };
+
+export const zeroFill = (date: number) => {
+  return date.toString().padStart(2, '0');
+};
