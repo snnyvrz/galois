@@ -1,5 +1,3 @@
-import defaultImage from './assets/images/default.png';
-
 const CONFIG = {
   name: 'Galois Foundation',
 
@@ -9,7 +7,6 @@ const CONFIG = {
 
   title: 'Galois Foundation',
   description: 'Galois Foundation Homepage',
-  defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 

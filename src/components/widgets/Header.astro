@@ -57,79 +57,81 @@ const {
         <ToggleMenu />
       </div>
     </div>
-    <nav
-      class="hidden h-[calc(100vh-72px)] w-full items-center overflow-y-auto dark:text-slate-200 md:mx-5 md:flex md:h-auto md:w-auto md:overflow-visible"
-      aria-label="Main navigation"
-    >
-      <ul class="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base">
-        {
-          links.map(({ text, href, links }) => (
-            <li class={links?.length ? 'dropdown' : ''}>
-              {links?.length ? (
-                <>
-                  <button class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white">
-                    {text} <Icon name="tabler:chevron-down" class="ml-0.5 hidden h-3.5 w-3.5 md:inline" />
-                  </button>
-                  <ul class="dropdown-menu dark:md:bg-dark divide-y rounded py-4 pl-4 font-medium drop-shadow-xl md:absolute md:hidden md:min-w-[200px] md:bg-white/90 md:pl-0 md:backdrop-blur-md">
-                    {links.map(({ text: text2, href: href2 }) => (
-                      <li>
-                        <a
-                          class="whitespace-no-wrap block px-5 py-2 first:rounded-t last:rounded-b dark:hover:bg-gray-700 md:hover:bg-gray-200"
-                          href={href2}
-                        >
-                          {text2}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              ) : (
-                <a
-                  class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
-                  href={href}
-                >
-                  {text}
-                </a>
-              )}
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
-    <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
-      <div class="hidden items-center md:flex">
-        {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}
+    <div class="flex flex-row">
+      <nav
+        class="hidden h-[calc(100vh-72px)] w-full items-center overflow-y-auto dark:text-slate-200 md:mx-5 md:flex md:h-auto md:w-auto md:overflow-visible"
+        aria-label="Main navigation"
+      >
+        <ul class="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base">
+          {
+            links.map(({ text, href, links }) => (
+              <li class={links?.length ? 'dropdown' : ''}>
+                {links?.length ? (
+                  <>
+                    <button class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white">
+                      {text} <Icon name="tabler:chevron-down" class="ml-0.5 hidden h-3.5 w-3.5 md:inline" />
+                    </button>
+                    <ul class="dropdown-menu dark:md:bg-dark divide-y rounded py-4 pl-4 font-medium drop-shadow-xl md:absolute md:hidden md:min-w-[200px] md:bg-white/90 md:pl-0 md:backdrop-blur-md">
+                      {links.map(({ text: text2, href: href2 }) => (
+                        <li>
+                          <a
+                            class="whitespace-no-wrap block px-5 py-2 first:rounded-t last:rounded-b dark:hover:bg-gray-700 md:hover:bg-gray-200"
+                            href={href2}
+                          >
+                            {text2}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <a
+                    class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
+                    href={href}
+                  >
+                    {text}
+                  </a>
+                )}
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
+        <div class="hidden items-center md:flex">
+          {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}
 
-        {
-          showRssFeed && (
-            <a
-              class="text-muted inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-              aria-label="RSS Feed"
-              href={getAsset('/rss.xml')}
-            >
-              <Icon name="tabler:rss" class="h-5 w-5" />
-            </a>
-          )
-        }
-        {
-          actions?.length ? (
-            <span class="ml-4">
-              {actions.map(({ text, href, type }) => (
-                <a
-                  class:list={[
-                    'btn ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm',
-                    { 'btn-ghost': type === 'ghost', 'btn-primary': type === 'primary' },
-                  ]}
-                  href={href}
-                >
-                  <Fragment set:html={text} />
-                </a>
-              ))}
-            </span>
-          ) : (
-            ''
-          )
-        }
+          {
+            showRssFeed && (
+              <a
+                class="text-muted inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                aria-label="RSS Feed"
+                href={getAsset('/rss.xml')}
+              >
+                <Icon name="tabler:rss" class="h-5 w-5" />
+              </a>
+            )
+          }
+          {
+            actions?.length ? (
+              <span class="ml-4">
+                {actions.map(({ text, href, type }) => (
+                  <a
+                    class:list={[
+                      'btn ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm',
+                      { 'btn-ghost': type === 'ghost', 'btn-primary': type === 'primary' },
+                    ]}
+                    href={href}
+                  >
+                    <Fragment set:html={text} />
+                  </a>
+                ))}
+              </span>
+            ) : (
+              ''
+            )
+          }
+        </div>
       </div>
     </div>
   </div>

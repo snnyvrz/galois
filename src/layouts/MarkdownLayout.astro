@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import '../assets/styles/markdown.css';
 
 import { MetaSEO } from '~/types';
 
@@ -12,11 +13,16 @@ const meta: MetaSEO = {
 
 <Layout {meta}>
   <section
-    class="mx-auto my-4 max-w-4xl rounded-lg bg-white bg-opacity-5 px-4 py-16 shadow-lg backdrop-blur-md sm:px-6 md:my-8 lg:px-8 lg:py-20"
+    class="mx-auto my-4 max-w-4xl rounded-lg bg-white bg-opacity-5 pb-16 shadow-lg backdrop-blur-md md:my-8 lg:pb-20"
   >
-    <h1 class="leading-tighter font-heading text-4xl font-bold tracking-tighter md:text-5xl">{frontmatter.title}</h1>
+    <div class="relative m-0 rounded-t-lg">
+      <img src="/exchange.jpg" alt="banner image" class="w-full rounded-t-lg opacity-50" />
+      <h1 class="leading-tighter absolute bottom-4 px-4 font-heading text-4xl font-bold tracking-tighter md:text-5xl">
+        {frontmatter.title}
+      </h1>
+    </div>
     <div
-      class="prose-md prose-headings:leading-tighter prose prose-lg mx-auto mt-8 max-w-4xl dark:prose-invert marker:text-accent prose-headings:font-heading prose-headings:font-bold prose-headings:tracking-tighter prose-a:text-blue-600 prose-img:rounded-md prose-img:shadow-lg dark:prose-headings:text-slate-300 dark:prose-a:text-blue-400"
+      class="prose-md prose-headings:leading-tighter prose prose-lg mx-auto mt-8 max-w-4xl px-8 dark:prose-invert marker:text-accent prose-headings:font-heading prose-headings:font-bold prose-headings:tracking-tighter prose-a:text-blue-600 prose-img:rounded-md prose-img:shadow-lg dark:prose-headings:text-slate-300 dark:prose-a:text-blue-400"
     >
       <slot />
     </div>

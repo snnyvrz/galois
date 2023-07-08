@@ -58,8 +58,3 @@
 [data-aw-toggle-menu].expanded g > path:last-child {
   @apply translate-x-[14px] translate-y-[-8px] rotate-45;
 }
-
-[data-is-top='false'] .scroll-down-hint {
-  display: block;
-  z-index: 2;
-}
