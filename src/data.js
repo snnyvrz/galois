@@ -38,21 +38,19 @@ export const footerData = {
     {
       title: 'Solutions',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'Hybrid Exchange', href: '/landing/hybrid-exchange' },
+        { text: 'Shared Currency Exchange', href: '/landing/shared-currency-exchange' },
+        { text: 'Multi Strategy Wallet', href: '/landing/multi-strategy-wallet' },
+        { text: 'Liquidity Aggregator', href: '/landing/liquidity-aggregator' },
+        { text: 'Market Making As A Service', href: '/landing/market-making-as-a-service' },
       ],
     },
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Contact', href: '#' },
-        { text: 'Careers', href: '#' },
+        { text: 'About', href: '#about' },
+        { text: 'Contact', href: '#footer' },
+        { text: 'Careers', href: '/' },
       ],
     },
   ],
@@ -61,6 +59,6 @@ export const footerData = {
     { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/galoisFoundation' },
   ],
 };

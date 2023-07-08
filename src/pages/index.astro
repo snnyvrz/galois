@@ -3,6 +3,7 @@ import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Countdown from '~/components/widgets/countdown';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 
@@ -22,6 +23,8 @@ const meta = {
       <span class="highlight capitalize text-accent lg:inline">neither do we.</span>
     </Fragment>
   </Hero>
+
+  <Countdown client:only="react" />
 
   <!-- Features Widget *************** -->
 
