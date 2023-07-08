@@ -1,5 +1,4 @@
 ---
-import { Icon } from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
 
 interface Item {
@@ -31,7 +30,7 @@ const {
 } = Astro.props;
 ---
 
-<section class:list={[{ 'pt-0 md:pt-0': isAfterContent }, 'bg-blue-50 dark:bg-slate-800 py-16 md:py-20']}>
+<section id="about" class:list={[{ 'pt-0 md:pt-0': isAfterContent }, 'bg-blue-50 dark:bg-slate-800 py-16 md:py-20']}>
   <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
     {
       (title || subtitle || highlight) && (
@@ -60,26 +59,6 @@ const {
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
       <div class="self-center md:basis-1/2">
         {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
-
-        {
-          items && (
-            <div class="space-y-8">
-              {items.map(({ title: title2, description, icon }) => (
-                <div class="flex">
-                  <div class="flex-shrink-0">
-                    <div class="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-gray-50">
-                      <Icon name={icon ? icon : 'tabler:check'} class="h-5 w-5" />
-                    </div>
-                  </div>
-                  <div class="ml-4">
-                    {title2 && <h3 class="text-lg font-medium leading-6 dark:text-white">{title2}</h3>}
-                    {description && <p class="text-muted mt-2 dark:text-slate-400" set:html={description} />}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )
-        }
       </div>
       <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
         {
@@ -91,10 +70,10 @@ const {
                 <Picture
                   class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
                   width={500}
-                  height={500}
+                  height={700}
                   widths={[400, 768]}
                   sizes="(max-width: 768px) 100vw, 432px"
-                  aspectRatio="500:500"
+                  aspectRatio="500:700"
                   {...image}
                 />
               )}

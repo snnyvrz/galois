@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
+import slugify from 'limax';
 
 interface Item {
   title: string;
@@ -60,9 +61,11 @@ const {
                 <div class="min-h-max">
                   <h3 class="mb-3 text-xl font-bold">{title}</h3>
                   <p class="text-muted line-clamp-3 text-start dark:text-slate-400" set:html={description} />
-                  <button class="btn mt-4 flex flex-row text-sm text-accent">
-                    Read More{' '}
-                    <Icon name="ic:sharp-greater-than" class="icon-light h-4 w-4 text-accent dark:text-current" />
+                  <button class="btn mt-4 text-sm text-accent">
+                    <a class="flex flex-row items-center" href={['landing', slugify(title)].join('/')}>
+                      Read More{' '}
+                      <Icon name="ic:sharp-greater-than" class="icon-light h-4 w-4 text-accent dark:text-current" />
+                    </a>
                   </button>
                 </div>
               </div>

@@ -25,10 +25,10 @@ export const headerData = {
       ],
     },
     {
-      text: 'Team',
-      href: '#',
+      text: 'About',
+      href: '#about',
     },
-    { text: 'Contact', href: '#' },
+    { text: 'Contact', href: '#footer' },
   ],
   actions: [],
 };
