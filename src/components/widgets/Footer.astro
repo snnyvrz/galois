@@ -50,8 +50,8 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         </div>
       </div>
       {
-        links.map(({ title, links }) => (
-          <div class="col-span-6 md:col-span-3 lg:col-span-2">
+        links.map(({ title, links }, index) => (
+          <div class={`col-span-6 md:col-span-3 lg:col-span-2 lg:col-end-${9 + index * 2}`}>
             <div class="mb-2 font-medium dark:text-gray-300">{title}</div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
