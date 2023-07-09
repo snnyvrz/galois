@@ -30,10 +30,9 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
   id="footer"
   class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800']}
 >
-  <div class="dark:bg-dark pointer-events-none absolute inset-0" aria-hidden="true"></div>
-  <div class="relative mx-auto max-w-7xl px-4 dark:text-slate-300 sm:px-6">
-    <div class="grid grid-cols-12 gap-4 gap-y-8 py-8 sm:gap-8 md:py-12">
-      <div class="col-span-12 lg:col-span-4">
+  <div class="dark:bg-dark opacity-80 pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  <div class="relative md:flex-row  mx-auto max-w-7xl px-4 dark:text-slate-300 sm:px-6">
+    <div class="flex flex-col md:flex-row justify-evenly gap-8 gap-y-8 py-8 md:py-12">
         <div class="mb-2">
           <a class="inline-block text-xl font-bold" href={getHomePermalink()}>{SITE?.name}</a>
         </div>
@@ -48,10 +47,10 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
             ))
           }
         </div>
-      </div>
+      <div class="flex flex-row gap-8">
       {
         links.map(({ title, links }) => (
-          <div class={'col-span-6 md:col-span-3'}>
+          <div class={'col-span-3'}>
             <div class="mb-2 font-medium dark:text-gray-300">{title}</div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
@@ -71,6 +70,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           </div>
         ))
       }
+      </div>
     </div>
     <div class="py-6 md:flex md:items-center md:justify-between md:py-8">
       {
