@@ -1,4 +1,7 @@
 ---
+import { Picture } from '@astrojs/image/components';
+import slugify from 'limax';
+
 import Layout from '~/layouts/PageLayout.astro';
 import '../assets/styles/markdown.css';
 
@@ -16,8 +19,13 @@ const meta: MetaSEO = {
     class="mx-auto my-4 max-w-4xl rounded-lg bg-white bg-opacity-5 pb-16 shadow-lg backdrop-blur-md md:my-8 lg:pb-20"
   >
     <div class="relative m-0 rounded-t-lg">
-      <img src="/exchange.jpg" alt="banner image" class="w-full rounded-t-lg opacity-50" />
-      <h1 class="leading-tighter absolute bottom-4 px-4 font-heading text-4xl font-bold tracking-tighter md:text-5xl">
+      <Picture
+        src={import(`../assets/images/${slugify(frontmatter.title)}.jpg`)}
+        widths={[200, 400, 800]}
+        alt="banner image"
+        class="w-full rounded-t-lg opacity-50"
+      />
+      <h1 class="leading-tighter absolute bottom-4 px-4 font-heading text-2xl font-bold tracking-tighter md:text-5xl">
         {frontmatter.title}
       </h1>
     </div>

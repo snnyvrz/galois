@@ -23,3 +23,15 @@ export const trim = (str = '', ch?: string) => {
 export const zeroFill = (date: number) => {
   return date.toString().padStart(2, '0');
 };
+
+export const formatCountdownEntry = (singular_name: string, amount: number) => {
+  return amount === 1 ? singular_name : singular_name.concat('s');
+};
+
+export function formatCountdown(...args: { name: string; amount: number }[]) {
+  const fixedPart = 'Galois will launch in ';
+  const entries = args
+    .filter((a) => a.amount !== 0)
+    .map((a) => `${a.amount} ${formatCountdownEntry(a.name, a.amount)}`);
+  return fixedPart.concat(entries.join(', '));
+}
