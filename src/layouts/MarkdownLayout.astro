@@ -1,9 +1,12 @@
 ---
 import { Picture } from '@astrojs/image/components';
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/BaseLayout.astro';
 import slugify from 'limax';
 import '../assets/styles/markdown.css';
 import { MetaSEO } from '~/types';
+import Header from '~/components/widgets/Header.astro';
+import { markdownHeaderData, markdownFooterData } from '~/data';
+import Footer from '~/components/widgets/Footer.astro';
 
 const { frontmatter } = Astro.props;
 
@@ -13,7 +16,10 @@ const meta: MetaSEO = {
 ---
 
 <Layout {meta}>
-  <section
+  <slot name="header">
+    <Header {...markdownHeaderData} isSticky showToggleTheme />
+  </slot>
+  <main
     class="mx-auto my-4 max-w-4xl rounded-lg bg-white bg-opacity-5 pb-16 shadow-lg backdrop-blur-md md:my-8 lg:pb-20"
   >
     <div class="relative m-0 rounded-t-lg">
@@ -32,5 +38,8 @@ const meta: MetaSEO = {
     >
       <slot />
     </div>
-  </section>
+  </main>
+  <slot name="footer">
+    <Footer {...markdownFooterData} />
+  </slot>
 </Layout>
