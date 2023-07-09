@@ -29,7 +29,7 @@ export const formatCountdownEntry = (singular_name: string, amount: number) => {
 };
 
 export function formatCountdown(...args: { name: string; amount: number }[]) {
-  const fixedPart = 'Galois will launch in ';
+  const fixedPart = 'Galois Hybrid Exchange will be launched in ';
   const entries = args
     .filter((a) => a.amount !== 0)
     .map((a) => `${a.amount} ${formatCountdownEntry(a.name, a.amount)}`);
