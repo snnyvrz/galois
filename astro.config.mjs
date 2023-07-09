@@ -1,14 +1,15 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
+import { SITE } from './src/config.mjs';
+import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 import image from '@astrojs/image';
 import mdx from '@astrojs/mdx';
-import compress from 'astro-compress';
-import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
-import { SITE } from './src/config.mjs';
 import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
+import compress from 'astro-compress';
+import { defineConfig } from 'astro/config';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const whenExternalScripts = (items = []) =>
   SITE.googleAnalyticsId ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];

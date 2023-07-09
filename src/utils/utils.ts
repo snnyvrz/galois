@@ -33,5 +33,5 @@ export function formatCountdown(...args: { name: string; amount: number }[]) {
   const entries = args
     .filter((a) => a.amount !== 0)
     .map((a) => `${a.amount} ${formatCountdownEntry(a.name, a.amount)}`);
-  return fixedPart.concat(entries.join(', '));
+  return fixedPart.concat([entries.pop(), entries.join(', ')].reverse().join(' and ')).concat('.');
 }

@@ -1,5 +1,4 @@
 import slugify from 'limax';
-
 import { SITE } from '~/config.mjs';
 import { trim } from '~/utils/utils';
 

@@ -10,7 +10,7 @@ export default () => {
       date={endDate}
       renderer={({ days, hours, minutes, seconds }) => {
         return (
-          <div className="flex w-full flex-row justify-center self-center p-4 text-center">
+          <div className="mb-4 flex w-full flex-row justify-center self-center p-4 text-center">
             <p className="text-extrabold text-xl text-primary dark:text-white md:text-2xl">
               {formatCountdown(
                 { name: 'month', amount: Math.floor(days / 30) },

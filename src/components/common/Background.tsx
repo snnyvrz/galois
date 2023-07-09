@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
-import type { Engine } from 'tsparticles-engine';
-import Particles from 'react-particles';
-import { loadLinksPreset } from 'tsparticles-preset-links';
 import { isMobile } from 'react-device-detect';
+import Particles from 'react-particles';
+import type { Engine } from 'tsparticles-engine';
+import { loadLinksPreset } from 'tsparticles-preset-links';
 
 export default () => {
   const particlesInit = useCallback(async (engine: Engine) => {

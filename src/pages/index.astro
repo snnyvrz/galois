@@ -1,11 +1,10 @@
 ---
-import { SITE } from '~/config.mjs';
-import Layout from '~/layouts/PageLayout.astro';
-
-import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
 import Countdown from '~/components/widgets/countdown';
 import Features from '~/components/widgets/Features.astro';
-import Content from '~/components/widgets/Content.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
 
 const meta = {
   title: SITE.title,
@@ -17,14 +16,16 @@ const meta = {
 <Layout {meta}>
   <!-- Hero Widget ******************* -->
 
-  <Hero callToAction2={{ text: 'Learn more', href: '#features' }}>
-    <Fragment slot="title">
-      Innovation Never Sleeps,<br />
-      <span class="highlight capitalize text-accent lg:inline">neither do we.</span>
-    </Fragment>
-  </Hero>
+  <div class="flex h-screen flex-col justify-evenly">
+    <Hero callToAction2={{ text: 'Learn more', href: '#features' }}>
+      <Fragment slot="title">
+        Innovation Never Sleeps,<br />
+        <span class="highlight capitalize text-accent lg:inline">neither do we.</span>
+      </Fragment>
+    </Hero>
 
-  <Countdown client:only="react" />
+    <Countdown client:only="react" />
+  </div>
 
   <!-- Features Widget *************** -->
 
