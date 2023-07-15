@@ -1,6 +1,4 @@
 ---
-import { PageTransition } from 'astro-page-transition';
-import { ScrollObserver } from 'astro-scroll-observer';
 import '~/assets/styles/base.css';
 import Background from '~/components/common/Background';
 import BasicScripts from '~/components/common/BasicScripts.astro';
@@ -20,11 +18,9 @@ const { language = 'en', textDirection = 'ltr' } = SITE;
 <html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>
     <MetaTags {...meta} />
-    <ScrollObserver />
   </head>
 
-  <body class="text-page bg-light dark:bg-dark tracking-tight antialiased dark:text-slate-300">
-    <PageTransition speed={300} />
+  <body class="text-page bg-light dark:bg-dark overflow-x-hidden tracking-tight antialiased dark:text-slate-300">
     <slot />
     <BasicScripts />
     <Background client:only="react" />
