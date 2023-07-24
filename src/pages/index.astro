@@ -1,6 +1,6 @@
 ---
 import Content from '~/components/widgets/Content.astro';
-import Countdown from '~/components/widgets/countdown';
+import Countdown from '~/components/widgets/Countdown';
 import Features from '~/components/widgets/Features.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import { SITE } from '~/config.mjs';
@@ -24,7 +24,7 @@ const meta = {
       </Fragment>
     </Hero>
 
-    <Countdown client:only="react" />
+    <!-- <Countdown client:only="react" /> -->
   </div>
 
   <!-- Features Widget *************** -->
